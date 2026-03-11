@@ -1,4 +1,3 @@
-import { useDiagram } from '../../webgpu-flow/src/components/DiagramProvider';
 import { DiagramCanvas } from '../../webgpu-flow/src/components/DiagramCanvas';
 import { Node, type NodeProps } from '../../webgpu-flow/src/components/Node';
 import { Edge } from '../../webgpu-flow/src/components/Edge';
