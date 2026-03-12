@@ -41,7 +41,7 @@ const getOptimalCanvasSize = () => {
   };
 
 export default function ERFlow() {
-    const [, setSupportedSampleCount] = useState<string[] | undefined>(['2']);
+    const [, setSupportedSampleCount] = useState<string[] | undefined>(['1']);
     const [canvasSize, setCanvasSize] = useState(() => getOptimalCanvasSize());
     const [nodes, setNodes] = useState(erData.nodes as NodeProps[]);
     const [edges] = useState(erData.edges);
