@@ -92,7 +92,7 @@ useEffect(() => {
                     visualContent: {
                         type: 'image',
                         content: thumbnailMap[node.id],
-                        size: { width: 150, height: 150 }
+                        size: { width: 100, height: 100 }
                     }
                 }
             };
