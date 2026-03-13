@@ -6,7 +6,6 @@ import { useEffect, useRef, useState } from 'react';
 import erData from '../assets/efta_webgpu_flow.json';
 import type { MarkerType } from '../../webgpu-flow/src/renderers/FloatingEdgeRenderer';
 
-console.log = () => {}
 
 
 const isMobileDevice = () => {
@@ -42,7 +41,7 @@ const getOptimalCanvasSize = () => {
 export default function ERFlow() {
     const [, setSupportedSampleCount] = useState<string[] | undefined>(['2']);
     const [canvasSize, setCanvasSize] = useState(() => getOptimalCanvasSize());
-    const [nodes, setNodes] = useState(erData.nodes as NodeProps[]);
+    const [nodes] = useState(erData.nodes as NodeProps[]);
     const [edges] = useState(erData.edges);
 
     
