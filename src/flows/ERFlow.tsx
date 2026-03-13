@@ -50,6 +50,25 @@ export default function ERFlow() {
     
 useEffect(() => {
 
+    const isMobile = isMobileDevice();
+    if (isMobile) {
+      // Set up mobile viewport
+      let viewport = document.querySelector('meta[name="viewport"]');
+      if (!viewport) {
+        viewport = document.createElement('meta');
+        viewport.setAttribute('name', 'viewport');
+        document.head.appendChild(viewport);
+      }
+      viewport.setAttribute(
+        'content',
+        'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'
+      );
+
+      // Prevent default touch behaviors
+      document.body.style.overscrollBehavior = 'contain';
+      document.body.style.touchAction = 'manipulation';
+    }
+
     const handleResize = () => {
       setCanvasSize(getOptimalCanvasSize());
       
