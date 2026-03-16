@@ -1,5 +1,5 @@
 import { DiagramCanvas } from '../../webgpu-flow/src/components/DiagramCanvas';
-import { Node, type NodeProps } from '../../webgpu-flow/src/components/Node';
+import { Node } from '../../webgpu-flow/src/components/Node';
 import { Edge } from '../../webgpu-flow/src/components/Edge';
 import { type NodeType } from '../../webgpu-flow/src/components/NodePalette';
 import { useEffect, useRef, useState } from 'react';
@@ -12,7 +12,7 @@ const { nodes, edges } = await applyElkLayout(raw.nodes, raw.edges, {
     'elk.direction': 'RIGHT',
     'elk.layered.spacing.nodeNodeBetweenLayers': '400',
     'elk.spacing.nodeNode': '150',
-    
+
 });
 
 const isMobileDevice = () => {
